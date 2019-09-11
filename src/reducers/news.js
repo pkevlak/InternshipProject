@@ -71,7 +71,7 @@ const news = (state = initialState, action) => {
 };
 
 const loadNews = () => (dispatch) => {
-  const api = 'https://newsapi.org/v2/everything?q=bitcoin&pageSize=100&from=2019-08-10&sortBy=publishedAt&apiKey=e13b364741624b378dff08cc792a7da1';
+  const api = 'https://newsapi.org/v2/top-headlines?country=us&pageSize=100&category=business&apiKey=e13b364741624b378dff08cc792a7da1';
   dispatch({type: 'CHANGE_LOADING'});
   fetch(api)
     .then((res) => {
